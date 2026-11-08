@@ -54,6 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\ALP_Assets\Poplar Tree FREE\Core\Scripts\Global Lighting\Editor\ALP8310_LightsSettings.cs" />
+    <Compile Include="Assets\ALP_Assets\Poplar Tree FREE\Core\Scripts\GUI\Editor\ALP8310_ShaderDrawers.cs" />
+    <Compile Include="Assets\ALP_Assets\Poplar Tree FREE\Core\Scripts\Global Lighting\Editor\ALP8310_GlobalLightingWindow.cs" />
+    <Compile Include="Assets\ALP_Assets\Poplar Tree FREE\Core\Scripts\GUI\Editor\ALP8310_ShaderGUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1551,6 +1555,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj" />
+    <ProjectReference Include="ALP8310_ControllerGlobal.csproj" />
+    <ProjectReference Include="ALP8310_ControllerGlobal.Editor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

@@ -57,6 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TerrainSampleAssets\ThirdPartyNotices.txt" />
+    <None Include="Assets\ALP_Assets\Poplar Tree FREE\Shaders\Billboard_Instanced.shader" />
+    <None Include="Assets\ALP_Assets\Poplar Tree FREE\Shaders\ALP Billboard Cross Wind.shader" />
+    <None Include="Assets\ALP_Assets\Poplar Tree FREE\Shaders\Billboard.shader" />
+    <None Include="Assets\ALP_Assets\Poplar Tree FREE\Shaders\ALP Surface Detail.shader" />
+    <None Include="Assets\ALP_Assets\Poplar Tree FREE\Shaders\ALP Water Gestner Waves.shader" />
+    <None Include="Assets\ALP_Assets\Poplar Tree FREE\Shaders\ALP Surface Detail Wind.shader" />
+    <None Include="Assets\ALP_Assets\Poplar Tree FREE\Shaders\ALP Cutout Translucency Wind.shader" />
     <None Include="Assets\TerrainSampleAssets\ShaderGraphs\CustomFunctions\CustomLighting.hlsl" />
   </ItemGroup>
   <ItemGroup>
@@ -1462,6 +1469,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ALP8310_ControllerGlobal.csproj" />
+    <ProjectReference Include="ALP8310_ControllerGlobal.Editor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
