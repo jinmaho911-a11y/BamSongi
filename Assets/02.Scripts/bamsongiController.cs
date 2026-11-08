@@ -6,48 +6,32 @@ using UnityEngine.UIElements;
 
 public class bamsongiController : MonoBehaviour
 {
-    public Text distance_text;
-    // 1. 자식으로 설정할 오브젝트
-    public Transform bamsongi;
-
-    // 2. 부모가 될 오브젝트
-    public Transform target;
+    public GameObject manager;
 // Start is called once before the first execution of Update after the MonoBehaviour is created
 void Start()
     {
+        manager = GameObject.Find("GameManager");
             //Shoot(new Vector3(0, 200, 2000));
     }
 
     // Update is called once per frame
     public void Shoot(Vector3 dir)
     {
-
         GetComponent<Rigidbody>().AddForce(dir);
-
-
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.GetComponent<targetMove>() != null)
+        {
+            manager.GetComponent<GameManager>().totalScore += collision.gameObject.GetComponent<targetMove>().GetScore();
+            manager.GetComponent<GameManager>().UpdateUI();
+        }
             GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<ParticleSystem>().Play();
-            transform.SetParent(collision.transform, true);
+            transform.SetParent(collision.transform);
+
+        //gameObject.transform.SetParent(collision.transform);
     }
-    void Update()
-    {
-        float length = bamsongi;
-
-        if (length >= 0)
-        {
-            distance_text.text = "현재 점수 :" + 20;
-        }
-        else
-        {
-            distance_text.text = "게임 오버 예~";
-        }
-
-
-    }
-
 }
 
 //파티클 시스템의 대하여

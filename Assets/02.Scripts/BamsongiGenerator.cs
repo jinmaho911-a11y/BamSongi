@@ -17,6 +17,7 @@ public class BamsongiGenerator : MonoBehaviour
             Vector3 worldDir = ray.direction;
             bamsongi.GetComponent<bamsongiController>().Shoot(worldDir.normalized * 2000);
         }
+        
     }
 }
 //그림에 나타나듯이 월드 좌표계와 스크린 좌표계는 전혀 다른 척도(단위)를 사용합니다
