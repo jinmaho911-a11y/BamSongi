@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3ebf760e067dd24f8e4a114198255e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::bamsongiController
+  bamsongi: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2327279fcd32a42b4fd3e3d762e274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::targetMove
+  moveSpeed: 0
 --- !u!1 &1721905568
 GameObject:
   m_ObjectHideFlags: 0
